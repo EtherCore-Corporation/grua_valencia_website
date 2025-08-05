@@ -7,20 +7,20 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Teléfono",
-    value: "+1 (555) 123-4567",
+    value: "+34 96 123 45 67",
     description: "Línea directa 24/7"
   },
   {
     icon: Mail,
     title: "Email",
-    value: "info@gruaselevadoras.com",
+    value: "info@plataformaslaterra.es",
     description: "Respuesta en 2 horas"
   },
   {
     icon: MapPin,
     title: "Ubicación",
-    value: "Ciudad de México",
-    description: "Servicio en toda la CDMX"
+    value: "Valencia, España",
+    description: "Servicio en toda la Comunidad Valenciana"
   },
   {
     icon: Clock,
@@ -32,7 +32,7 @@ const contactInfo = [
 
 export default function ContactSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-900 to-slate-900 relative overflow-hidden">
+    <section id="contacto" className="py-20 bg-gradient-to-b from-blue-900 to-slate-900 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl" />
@@ -197,14 +197,14 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="border-t border-white/10 pt-12"
         >
-          <div className="grid md:grid-cols-4 gap-8 text-center md:text-left">
-            <div>
-              <h4 className="text-xl font-bold text-white mb-4">Grúas Elevadoras Pro</h4>
-              <p className="text-gray-400 leading-relaxed">
-                Líderes en servicios de traslado vertical con más de 15 años de experiencia 
-                y tecnología de vanguardia.
-              </p>
-            </div>
+                     <div className="grid md:grid-cols-4 gap-8 text-center md:text-left">
+             <div>
+               <h4 className="text-xl font-bold text-white mb-4">Plataformas La Terra</h4>
+               <p className="text-gray-400 leading-relaxed">
+                 Líderes en servicios de traslado vertical en Valencia con más de 15 años de experiencia 
+                 y tecnología de vanguardia.
+               </p>
+             </div>
             
             <div>
               <h5 className="text-lg font-semibold text-white mb-4">Servicios</h5>
@@ -226,23 +226,23 @@ export default function ContactSection() {
               </ul>
             </div>
             
-            <div>
-              <h5 className="text-lg font-semibold text-white mb-4">Contacto</h5>
-              <ul className="space-y-2 text-gray-400">
-                <li>+1 (555) 123-4567</li>
-                <li>info@gruaselevadoras.com</li>
-                <li>Ciudad de México</li>
-                <li>24/7 Disponible</li>
-              </ul>
-            </div>
+                         <div>
+               <h5 className="text-lg font-semibold text-white mb-4">Contacto</h5>
+               <ul className="space-y-2 text-gray-400">
+                 <li>+34 96 123 45 67</li>
+                 <li>info@plataformaslaterra.es</li>
+                 <li>Valencia, España</li>
+                 <li>24/7 Disponible</li>
+               </ul>
+             </div>
           </div>
           
-          <div className="mt-12 pt-8 border-t border-white/10 text-center">
-            <p className="text-gray-400">
-              © 2024 Grúas Elevadoras Pro. Todos los derechos reservados. 
-              Servicio profesional de traslado vertical.
-            </p>
-          </div>
+                     <div className="mt-12 pt-8 border-t border-white/10 text-center">
+             <p className="text-gray-400">
+               © 2024 Plataformas La Terra. Todos los derechos reservados. 
+               Servicio profesional de traslado vertical en Valencia.
+             </p>
+           </div>
         </motion.div>
       </div>
     </section>

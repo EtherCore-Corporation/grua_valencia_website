@@ -8,12 +8,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Grúas Elevadoras Pro - Servicio Profesional de Traslado Vertical",
-  description: "Servicio especializado de grúas elevadoras para traslado de muebles y electrodomésticos hasta 12 pisos. Tecnología de vanguardia y seguridad garantizada en Ciudad de México.",
-  keywords: "grúas elevadoras, traslado vertical, mudanzas, electrodomésticos, edificios, Ciudad de México",
-  authors: [{ name: "Grúas Elevadoras Pro" }],
-  creator: "Grúas Elevadoras Pro",
-  publisher: "Grúas Elevadoras Pro",
+  title: "Plataformas La Terra - Servicio Profesional de Traslado Vertical en Valencia",
+  description: "Servicio especializado de grúas elevadoras para traslado de muebles y electrodomésticos hasta 12 pisos. Tecnología de vanguardia y seguridad garantizada en Valencia.",
+  keywords: "grúas elevadoras, traslado vertical, mudanzas, electrodomésticos, edificios, Valencia, plataformas elevadoras",
+  authors: [{ name: "Plataformas La Terra" }],
+  creator: "Plataformas La Terra",
+  publisher: "Plataformas La Terra",
   formatDetection: {
     email: false,
     address: false,
@@ -24,25 +24,25 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Grúas Elevadoras Pro - Servicio Profesional de Traslado Vertical",
-    description: "Servicio especializado de grúas elevadoras para traslado de muebles y electrodomésticos hasta 12 pisos.",
-    url: 'https://gruaselevadoras.com',
-    siteName: 'Grúas Elevadoras Pro',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Grúas Elevadoras Pro - Servicio de Traslado Vertical',
-      },
-    ],
-    locale: 'es_MX',
+    title: "Plataformas La Terra - Servicio Profesional de Traslado Vertical en Valencia",
+    description: "Servicio especializado de grúas elevadoras para traslado de muebles y electrodomésticos hasta 12 pisos en Valencia.",
+    url: 'https://plataformaslaterra.es',
+    siteName: 'Plataformas La Terra',
+          images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Plataformas La Terra - Servicio de Traslado Vertical en Valencia',
+        },
+      ],
+          locale: 'es_ES',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Grúas Elevadoras Pro - Servicio Profesional de Traslado Vertical",
-    description: "Servicio especializado de grúas elevadoras para traslado de muebles y electrodomésticos hasta 12 pisos.",
+    title: "Plataformas La Terra - Servicio Profesional de Traslado Vertical en Valencia",
+    description: "Servicio especializado de grúas elevadoras para traslado de muebles y electrodomésticos hasta 12 pisos en Valencia.",
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -66,10 +66,10 @@ export default function RootLayout({
   return (
     <html lang="es" className={inter.variable}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" href="/logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo.png" />
         <meta name="theme-color" content="#1A237E" />
         <meta name="msapplication-TileColor" content="#1A237E" />
       </head>

@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800 overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
@@ -29,7 +30,7 @@ export default function HeroSection() {
               className="mb-6"
             >
               <span className="inline-block px-4 py-2 bg-orange-500/20 border border-orange-500/30 rounded-full text-orange-300 text-sm font-medium backdrop-blur-sm">
-                🏗️ Grúas Elevadoras Valencia
+                🏗️ Plataformas La Terra - Valencia
               </span>
             </motion.div>
 
@@ -44,10 +45,10 @@ export default function HeroSection() {
               }}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-                Grúas
+                Plataformas
               </span>{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-                Elevadoras
+                La Terra
               </span>
               <br />
               <span className="text-3xl md:text-4xl lg:text-5xl text-gray-300">
@@ -107,25 +108,74 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Contact Form */}
+          {/* Right Column - Hero Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative p-8 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10">
-              {/* Gradient Border */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500 via-blue-500 to-orange-500 p-[2px]">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800"></div>
-              </div>
+            <div className="relative">
+              {/* Main Hero Image */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="relative"
+              >
+                <Image
+                  src="/grua-sin-background.png"
+                  alt="Grúa Elevadora Profesional"
+                  width={600}
+                  height={600}
+                  className="w-full h-auto max-h-[600px] object-contain drop-shadow-2xl"
+                />
+                {/* Glow effect behind the image */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-blue-500/20 rounded-full blur-3xl -z-10"></div>
+              </motion.div>
               
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-                  Solicita tu Presupuesto
-                </h3>
-                
-                <form className="space-y-6">
+              {/* Floating elements */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                className="absolute -top-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+              >
+                ⭐ 15+ Años
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
+                className="absolute -bottom-4 -left-4 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+              >
+                🏗️ Hasta 36m
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+        
+        {/* Contact Form Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-16 max-w-4xl mx-auto"
+        >
+          <div className="relative p-8 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10">
+            {/* Gradient Border */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500 via-blue-500 to-orange-500 p-[2px]">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800"></div>
+            </div>
+            
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
+                Solicita tu Presupuesto
+              </h3>
+              
+              <form className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-gray-300 text-sm font-medium mb-2">Nombre</label>
@@ -174,11 +224,13 @@ export default function HeroSection() {
                       <option value="otros">Otros</option>
                     </select>
                   </div>
-                  
+                </div>
+                
+                <div className="space-y-6">
                   <div>
                     <label className="block text-gray-300 text-sm font-medium mb-2">Mensaje</label>
                     <textarea
-                      rows={4}
+                      rows={8}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all resize-none"
                       placeholder="Describe tu proyecto o necesidades..."
                     ></textarea>
@@ -190,11 +242,11 @@ export default function HeroSection() {
                   >
                     Enviar Solicitud
                   </button>
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
 
       {/* WhatsApp Button */}
