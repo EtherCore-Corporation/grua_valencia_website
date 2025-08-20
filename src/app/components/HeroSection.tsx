@@ -73,7 +73,7 @@ export default function HeroSection() {
               className="mb-4 sm:mb-6 px-2 sm:px-0"
             >
               <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-500/20 border border-orange-500/30 rounded-full text-orange-300 text-xs sm:text-sm font-medium backdrop-blur-sm">
-                🏗️ {String(data.title)} - {String(data.subtitle)}
+                🏗️ Grúas Elevadoras Profesionales en {String(data.subtitle)}
               </span>
             </motion.div>
 
@@ -95,7 +95,7 @@ export default function HeroSection() {
               </span>
               <br />
               <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-300">
-                {String(data.subtitle)}
+                Soluciones de Altura en {String(data.subtitle)}
               </span>
             </motion.h1>
 
@@ -184,14 +184,45 @@ export default function HeroSection() {
             <div className="relative w-full max-w-lg sm:max-w-xl lg:max-w-2xl mx-auto">
               {/* Video Container */}
               <div className="relative w-full h-80 sm:h-96 md:h-[28rem] lg:aspect-video rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden bg-black">
+                <style jsx>{`
+                  iframe {
+                    pointer-events: none !important;
+                  }
+                  iframe::-webkit-media-controls {
+                    display: none !important;
+                  }
+                  iframe::-webkit-media-controls-panel {
+                    display: none !important;
+                  }
+                  iframe::-webkit-media-controls-play-button {
+                    display: none !important;
+                  }
+                  iframe::-webkit-media-controls-timeline {
+                    display: none !important;
+                  }
+                  iframe::-webkit-media-controls-current-time-display {
+                    display: none !important;
+                  }
+                  iframe::-webkit-media-controls-time-remaining-display {
+                    display: none !important;
+                  }
+                  iframe::-webkit-media-controls-mute-button {
+                    display: none !important;
+                  }
+                  iframe::-webkit-media-controls-volume-slider {
+                    display: none !important;
+                  }
+                  iframe::-webkit-media-controls-fullscreen-button {
+                    display: none !important;
+                  }
+                `}</style>
                 <iframe
-                  src="https://iframe.mediadelivery.net/play/394900/c10ee514-1380-4847-8dd8-e04e7086dba4?autoplay=1&loop=1&muted=1&controls=0&showinfo=0&rel=0&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3&cc_load_policy=0&playsinline=1&autohide=1&color=white&wmode=transparent&enablejsapi=0&origin=*"
+                  src="https://iframe.mediadelivery.net/embed/394900/c10ee514-1380-4847-8dd8-e04e7086dba4?autoplay=true&loop=true&muted=true&controls=false&showinfo=false&rel=false&modestbranding=true&disablekb=true&fs=false&iv_load_policy=3&cc_load_policy=0&playsinline=true&autohide=true&color=white&wmode=transparent&enablejsapi=false&origin=*"
                   className="absolute inset-0 w-full h-full pointer-events-none"
                   style={{ 
                     border: 'none',
-                    transform: 'scale(2.0)',
-                    transformOrigin: 'center center',
-                    filter: 'brightness(1.1) contrast(1.1)'
+                    transform: 'scale(1.2)',
+                    transformOrigin: 'center center'
                   }}
                   allow="autoplay; encrypted-media; picture-in-picture"
                   title="Video Plataforma La Terra"
