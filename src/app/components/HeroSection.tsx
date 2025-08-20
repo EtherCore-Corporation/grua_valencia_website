@@ -190,17 +190,22 @@ export default function HeroSection() {
                   style={{ 
                     border: 'none',
                     transform: 'scale(2.0)',
-                    transformOrigin: 'center center'
+                    transformOrigin: 'center center',
+                    filter: 'brightness(1.1) contrast(1.1)'
                   }}
-                  allowFullScreen
                   allow="autoplay; encrypted-media; picture-in-picture"
                   title="Video Plataforma La Terra"
                   frameBorder="0"
                   scrolling="no"
+                  allowFullScreen={false}
+                  sandbox="allow-scripts allow-same-origin"
                 />
                 
                 {/* Video Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+                
+                {/* Additional overlay to hide any remaining controls */}
+                <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 1 }} />
               </div>
               
               {/* Floating WhatsApp Button */}
