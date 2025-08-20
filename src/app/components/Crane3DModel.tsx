@@ -34,20 +34,20 @@ export default function Crane3DModel({ className = '', isScrollSection = false, 
     
     switch (view) {
       case 'front':
-        camera.position.set(0, 40, 100);
+        camera.position.set(0, 30, 60);
         break;
       case 'side':
-        camera.position.set(100, 40, 0);
+        camera.position.set(160, 25, 1000);
         break;
       case 'top':
-        camera.position.set(0, 120, 0);
+        camera.position.set(0, 100, 0);
         break;
       case 'detail':
-        camera.position.set(40, 35, 40);
+        camera.position.set(25, 20, 25);
         break;
     }
     
-    camera.lookAt(0, 20, 0);
+    camera.lookAt(100, 20, 40);
     
     // Re-enable controls after a short delay
     setTimeout(() => {
@@ -147,9 +147,9 @@ export default function Crane3DModel({ className = '', isScrollSection = false, 
     );
 
     if (isScrollSection) {
-      camera.position.set(0, 40, 100);
+      camera.position.set(0, 60, 150);
     } else {
-      camera.position.set(2, 8, 6);
+      camera.position.set(75, 25, 80);
     }
     camera.lookAt(0, 20, 0);
     cameraRef.current = camera;

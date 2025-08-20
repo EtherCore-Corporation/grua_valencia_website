@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@supabase/supabase-js": "^2.55.0",
     "@types/three": "^0.178.1",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",

@@ -42,7 +42,7 @@ export default function CraneScrollSection() {
             }}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-              Grúa Interactiva 3D
+              Grúa 3D
             </span>
           </h2>
           <p 
